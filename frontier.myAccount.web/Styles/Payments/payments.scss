@@ -1,0 +1,141 @@
+﻿.payments {
+
+    .payments-side-panel {
+        h1 {
+            color: $payment-base;
+            font-size: 44px;
+            font-weight: 400;
+        }
+
+        .active {
+            border-color: rgba(6,81,128,1.0);
+        }
+
+        li:hover {
+            background-color: lighten($payment-base, 55%);
+
+            a, a:link, a:visited {
+                color: $payment-base;
+            }
+        }
+
+        li.active a {
+            color: $payment-base;
+        }
+
+        li.active:before {
+            color: $payment-base;
+            border-bottom-color: $payment-base;
+        }
+    }
+
+    .list-group-item {
+        border-width: 0px 0px 1px 0px;
+        font-size: 14px;
+        border-radius: 0;
+        margin-bottom: 1px;
+
+        &.active {
+            background: #ffffff;
+            border-color: #ddd;
+        }
+
+        &.active:before {
+            content: "\F054";
+            font-family: FontAwesome;
+            display: inline-block;
+            margin-left: -15px;
+            margin-right: 6px;
+        }
+    }
+
+    .payment-profile, .callout-container.payment {
+        h1, h2, h3, h4 {
+            color: $payment-base;
+        }
+    }
+
+    .payment-profile {
+        position: static;
+    }
+
+    .container-breakout {
+        margin-top: 30px;
+        padding: 40px 0;
+        background-color: rgba(216,238,206,0.9);
+    }
+
+    .container-breakout h4 {
+        color: #000000;
+    }
+
+    .viewMyBill {
+
+        table {
+            td {
+                padding: 0px 8px;
+            }
+
+            tr.bg-success > td {
+                border-top: 1px solid $payment-base;
+                border-bottom: 1px solid $payment-base;
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+                h4 {
+                    color: $payment-base;
+                    text-align: left;
+                }
+            }
+            //tr.bg-success{
+            //  td {
+            //    line-height: 4rem;
+            //        padding:5px 10px;
+            //    margin-bottom: 5px;
+            //  }
+            //}
+            tr.total {
+                border-top: 1px solid #999;
+
+                td {
+                    padding-top: 20px;
+                }
+            }
+        }
+
+        .btn-round-lg {
+            border-radius: 5px;
+        }
+
+        .btn-round-sides {
+            border-radius: 0px 5px 5px 0px;
+        }
+
+        .custom {
+            width: 300px !important;
+        }
+
+        .linkLabel {
+            margin: 15px 5px 5px 5px;
+            font-weight: 700;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .btn-payment {
+            margin: 5px 5px 5px 5px;
+            font-weight: 700;
+            text-align: center;
+            padding-bottom: 5px;
+            color: #5cb85c !important;
+        }
+
+        .exceededDueDatebtn {
+            background-color: orange !important;
+        }
+
+        .alert-danger {
+            width: 185px;
+        }
+    }
+}

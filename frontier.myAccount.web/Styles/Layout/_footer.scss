@@ -1,0 +1,109 @@
+﻿/* --Footer-- */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    /*margin-bottom: 60px;*/
+}
+
+a {
+    cursor: pointer;
+}
+
+.tel {
+    white-space: nowrap;
+}
+
+
+@media (max-width: media-breakpoint-up(sm)) {
+
+    footer.fixedToBottom {
+        position: static;
+    }
+}
+
+@media (max-width: 576px) {
+
+    footer.fixedToBottom {
+        position: static;
+    }
+}
+
+footer#footer {
+    background-color: #222;
+    font-size: 12px;
+
+    .footer-dark {
+        background-color: #222;
+        border-top: 1px solid #090909;
+        overflow: hidden;
+
+        div.container {
+            line-height: 32px;
+
+            div.row {
+                padding: 0 1rem;
+
+                a,
+                a.active {
+                    color: #fff;
+                    margin: 0 3px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .text-sm-center,
+                .text-sm-center * {
+                    text-align: center !important;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                footer.fixedToBottom {
+                    position: static;
+                    margin-top: 5px;
+                }
+            }
+
+            @media (max-width: media-breakpoint-up(sm)) {
+                .text-sm-center,
+                .text-sm-center * {
+                    text-align: center !important;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                footer.fixedToBottom {
+                    position: static;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    h4 {
+        font-weight: bold;
+    }
+    
+    p {
+        color: white;
+    }
+
+    .navbar {
+        margin-bottom: 0;
+    }
+}
+
+footer.fixedToBottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+}
+
+/* --Footer-- */

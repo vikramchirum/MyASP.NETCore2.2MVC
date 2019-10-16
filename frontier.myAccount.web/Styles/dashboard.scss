@@ -1,0 +1,86 @@
+﻿// Globally override the bootstrap defaults here.
+$enable-caret: false;
+$btn-primary-bg: rgba(46,177,52,1.0) !default;
+
+@import "../wwwroot/lib/bootstrap/scss/bootstrap";
+@import './breakpoints.scss';
+@import './basecolors.scss';
+
+
+/* Global styles.*/
+
+.initiallyHidden {
+    display: none;
+}
+
+/* Take out default blue color for anchor tags. */
+a {
+    color: #000;
+}
+
+a, a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+.alert {
+    border-left: 10px solid;
+}
+
+.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-left: 0;
+    margin-right: 0;
+    background-color:white;
+}
+
+
+.btn-round {
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+
+    .fa {
+        margin-bottom: 10px;
+    }
+
+    .boxed {
+        display: block;
+        border: 1px solid #fff;
+        padding: 10px;
+        width: 70%;
+        margin: 10px auto;
+    }
+}
+
+.has-success {
+    .form-control {
+        border: 1px solid $payment-base;
+        color: $payment-base;
+
+        &:focus {
+            border-color: $payment-base;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px $payment-base;
+        }
+    }
+}
+
+/* Global styles.*/
+
+
+/*
+    Dashboard Header
+*/
+
+@import "../Styles/Dashboard/_header";
+
+@import "../Styles/MyAccount/myAcount";
+
+@import "../Styles/Payments/payments";
+
+/*nav.navbar {
+    background: linear-gradient($primary, $white)
+}*/

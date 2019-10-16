@@ -1,0 +1,234 @@
+﻿$brand-primary: #ffffff;
+
+@import "../wwwroot/lib/bootstrap/scss/bootstrap";
+@import './breakpoints.scss';
+@import './basecolors.scss';
+
+
+/* Footer Styles */
+@import "../Styles/Layout/_footer.scss";
+
+
+@import "../Styles/Account/_login.scss";
+@import "../Styles/Account/_register.scss";
+
+/* --Layout Styles-- */
+@media (min-width: 768px) {
+    html {
+    }
+}
+/* --Layout Styles-- */
+
+body {
+    background: $brand-primary;
+}
+
+a {
+    cursor: pointer;
+}
+
+.tel {
+    white-space: nowrap;
+}
+
+
+/* Header Styles */
+@import "../Styles/Layout/_header";
+
+
+
+
+.login-container {
+    margin-top: 50px;
+}
+
+.login-container > .row {
+    display: flex;
+}
+
+.ui-light {
+    background-color: rgba(251,248,249,0.45);
+
+    &:hover {
+        background-color: rgba(251,248,249,0.85);
+        transition: all 1s ease-in;
+    }
+}
+
+.ui-subhead {
+    font-size: 20px;
+}
+
+h4.media-heading {
+    font-size: 21px;
+}
+
+.ui-dark {
+    background-color: rgba(46,177,52,0.9);
+
+    hr {
+        border-color: rgba(251,248,249,0.15);
+    }
+
+    p {
+        color: #000;
+    }
+
+    * {
+        color: #fff;
+    }
+
+    .navbar-inverse {
+        border-radius: 0;
+        height: 32px;
+    }
+}
+
+container.login-container, .hero-wrapper {
+    min-height: 650px;
+}
+
+
+.my-gexa-login-form {
+    padding: 2em;
+    //height:100%;
+    //width:100%;
+    input,
+    .input-group-addon {
+        //border:0;
+        //border-radius: 0;
+        //border-bottom: 1px solid #000;
+        box-shadow: none;
+        outline: 0;
+        background: transparent;
+    }
+
+    .input:disabled {
+        cursor: pointer;
+    }
+
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #000;
+    }
+
+    .social-media-icon {
+        a {
+            margin-left: .4em;
+            text-decoration: underline;
+        }
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+/* login  */
+
+.btnWidth {
+    width: 150px !important;
+}
+
+.btnWidthSM {
+    width: 250px !important;
+    margin-left: 130px;
+}
+
+#register .modal-content {
+    width: 550px;
+    height: 850px;
+    overflow-y: scroll;
+}
+
+.modal-header {
+    padding-top: 70px;
+    border-bottom: 0px white;
+
+    .modal-title {
+        padding: 10px 0px 5px 75px;
+        font: bold;
+    }
+}
+
+::-webkit-input-placeholder {
+    font-size: small;
+    font-align: center;
+    color: lightgrey;
+}
+
+.inputRow input::-webkit-input-placeholder {
+    //padding:0px 15px 0px 15px;
+    text-align: center;
+    padding-left: 20px;
+    font-size: small;
+    font-align: center;
+    color: lightgrey;
+}
+
+::-moz-placeholder {
+    font-size: small;
+    font-align: center;
+    color: lightgrey;
+}
+/* enable absolute positioning */
+.inner-addon {
+    position: relative;
+
+    .faRight {
+        position: absolute;
+        top: 0;
+        right: 11px;
+        background-color: white;
+        width: 10px;
+    }
+}
+
+/* style icon */
+.inner-addon .fa {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+/* align icon */
+.left-addon .fa {
+    left: 0px;
+}
+
+.right-addon .fa {
+    right: 0px;
+}
+
+/* add padding  */
+.left-addon input {
+    padding-left: 30px;
+}
+
+.right-addon input {
+    padding-right: 30px;
+}
+
+.btnreg {
+    margin-top: 25px;
+    font-size: 10px;
+    padding: 15px 45px 15px 45px;
+    background-color: blue;
+    box-shadow: 5px 5px 2px black;
+    border: 1.5px solid black;
+    border-radius: 0px;
+    border-style: outset;
+    border-color: black;
+}
+
+.inputRow {
+    padding: 10px 50px 10px 70px;
+    width: 450px !important;
+
+    input {
+        border: none;
+        border-bottom: 1px solid #000000;
+        border-bottom-color: #000000;
+        //width:400px !important;
+    }
+}

@@ -1,0 +1,114 @@
+﻿@{
+    Layout = "~/Views/Shared/_Dashboard_Layout.cshtml";
+}
+
+<div class="container myAccount">
+    <div class="row">
+        <div class="col-sm-3 hidden-xs myAccount-side-panel">
+            <h1>My Account</h1>
+            <ul class="sidenav list-group">
+                <li class="list-group-item"><a href="#">Profile &amp; Preferences</a></li>
+                <li class="list-group-item"><a href="#">Message Center</a></li>
+                <li class="list-group-item"><a href="#">My Rewards &amp; Referrals</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-xs-12">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        let MyAccount = (function ($) {
+
+            function setNavigationLinkStatus() {
+                var path = '@ViewData["MyAccountView"]';
+                switch (path) {
+                    case 'Profile':
+                        $(".myAccount-side-panel .list-group .list-group-item")[0].className += ' active';
+                        break;
+                    case 'Profile':
+                        $(".myAccount-side-panel .list-group .list-group-item")[1].className += ' active';
+                        break;
+                    case 'Profile':
+                        $(".myAccount-side-panel .list-group .list-group-item")[2].className += ' active';
+                        break;
+                }
+            }
+
+            function assignSideNavClickHandlers() {
+
+                // set the .active css class on the parent li
+                // on the click of the anchor tag of the side nav in myAccount screen.
+                $(".myAccount-side-panel .list-group .list-group-item a").click(function (e) {
+                    e.preventDefault();
+                    $(this).parent().addClass('active').siblings().removeClass('active');
+                });
+
+                $('#btnUpdateEmailAddress').click(function (e) {
+                    e.preventDefault();
+                    let fonticon = $(this).find('>:first-child');
+                    var pencilClass = fonticon[0].className.split(' ')[1];
+                    if (pencilClass === 'fa-pencil') {
+                        fonticon.removeClass('fa-pencil').addClass('fa-remove');
+                    } else {
+                        fonticon.removeClass('fa-remove').addClass('fa-pencil');
+                    }
+
+                    $('.update-panel').toggle(250);
+                });
+            }
+            
+            function initializeEmailUpdate() {
+
+                $("form[name='changeEmailAddressForm']").validate({
+                    rules: {
+                        email: {
+                            email: true
+                        },
+                        confirmEmail: {
+                            email: true,
+                            equalTo: '[name="email"]'
+                        }
+                    },
+                    messages: {
+                        email: "Please enter a valid email address",
+                        confirmEmail: {
+                            equalTo: "Emails should match"
+                        }
+                    },
+                    highlight: function (element) {
+                        $(element).addClass('is-invalid');
+                    },
+                    unhighlight: function (element) {
+                        $(element).removeClass('is-invalid')
+                    },
+                    errorPlacement: function (error, element) {
+                        $(element).next().append(error);
+                    },
+                    submitHandler: function (form) {
+                        alert('yayyy');
+                    }
+                });
+            }
+
+            let init = function () {
+                setNavigationLinkStatus();
+                assignSideNavClickHandlers();
+                initializeEmailUpdate();
+            }
+
+            return {
+                init: init
+            };
+
+        })(jQuery);
+
+        MyAccount.init();
+
+    </script>
+
+}

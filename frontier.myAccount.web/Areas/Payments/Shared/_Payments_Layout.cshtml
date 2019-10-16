@@ -1,0 +1,111 @@
+﻿@{
+    Layout = "~/Views/Shared/_Dashboard_Layout.cshtml";
+}
+
+<div class="container payments">
+    <div class="row">
+        <div class="col-sm-3 hidden-xs payments-side-panel">
+            <h1>Payment Center</h1>
+            <ul class="sidenav list-group">
+                <li class="list-group-item"><a href="#">View My Bill</a></li>
+                <li class="list-group-item"><a href="#">Make a Payment</a></li>
+                <li class="list-group-item"><a href="#">Payment Accounts</a></li>
+                <li class="list-group-item"><a href="#">Payment Options</a></li>
+                <li class="list-group-item"><a href="#">Payment History</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 payment-profile">
+            
+            @await Component.InvokeAsync("ServiceAccountSelector")
+
+            @RenderBody()
+
+        </div>
+    </div>
+</div>
+
+@*<div class="col-sm-9 col-xs-12">
+    @RenderBody()
+</div>*@
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        let Payments = (function ($) {
+
+            function setNavigationLinkStatus() {
+                var path = '@ViewData["PaymentsView"]';
+                switch (path) {
+                    case 'Profile':
+                        $(".myAccount-side-panel .list-group .list-group-item")[0].className += ' active';
+                        break;
+                    case 'Profile':
+                        $(".myAccount-side-panel .list-group .list-group-item")[1].className += ' active';
+                        break;
+                    case 'Profile':
+                        $(".myAccount-side-panel .list-group .list-group-item")[2].className += ' active';
+                        break;
+                }
+            }
+
+            function assignSideNavClickHandlers() {
+
+                // set the .active css class on the parent li
+                // on the click of the anchor tag of the side nav in myAccount screen.
+                $(".payments-side-panel .list-group .list-group-item a").click(function (e) {
+                    e.preventDefault();
+                    $(this).parent().addClass('active').siblings().removeClass('active');
+                });
+            }
+
+            function initializeEmailUpdate() {
+
+                $("form[name='changeEmailAddressForm']").validate({
+                    rules: {
+                        email: {
+                            email: true
+                        },
+                        confirmEmail: {
+                            email: true,
+                            equalTo: '[name="email"]'
+                        }
+                    },
+                    messages: {
+                        email: "Please enter a valid email address",
+                        confirmEmail: {
+                            equalTo: "Emails should match"
+                        }
+                    },
+                    highlight: function (element) {
+                        $(element).addClass('is-invalid');
+                    },
+                    unhighlight: function (element) {
+                        $(element).removeClass('is-invalid')
+                    },
+                    errorPlacement: function (error, element) {
+                        $(element).next().append(error);
+                    },
+                    submitHandler: function (form) {
+                        alert('yayyy');
+                    }
+                });
+            }
+
+            let init = function () {
+                setNavigationLinkStatus();
+                assignSideNavClickHandlers();
+                initializeEmailUpdate();
+            }
+
+            return {
+                init: init
+            };
+
+        })(jQuery);
+
+        Payments.init();
+
+    </script>
+
+}

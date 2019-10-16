@@ -1,0 +1,71 @@
+﻿/**
+ * Breakpoints for my-gexa below:
+ */
+
+/* Portrait phones and smaller */
+@mixin phones {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Landscape phones and portrait tablets */
+@mixin phone-landscape {
+    @media (max-width: media-breakpoint-up(xs)) {
+        @content;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@mixin tablets-only {
+    @media (min-width: media-breakpoint-down(xs)) and (max-width: media-breakpoint-up(sm)) {
+        @content;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@mixin tablets-portrait {
+    @media (min-width: media-breakpoint-down(xs)) and (max-width: media-breakpoint-up(sm)) and (orientation:portrait) {
+        @content;
+    }
+}
+
+
+/* Landscape tablets and medium desktops */
+@mixin desktops-only {
+    @media (min-width: 801px) and (max-width: media-breakpoint-up(md)) {
+        @content;
+    }
+}
+
+/* Large desktops and laptops */
+@mixin large-screen {
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        @content;
+    }
+}
+
+// /* Large desktops and laptops */
+// @media (min-width: 1200px) {
+
+// }
+
+// /* Landscape tablets and medium desktops */
+// @media (min-width: 992px) and (max-width: 1199px) {
+
+// }
+
+// /* Portrait tablets and small desktops */
+// @media (min-width: 768px) and (max-width: 991px) {
+
+// }
+
+// /* Landscape phones and portrait tablets */
+// @media (max-width: 767px) {
+
+// }
+
+// /* Portrait phones and smaller */
+// @media (max-width: 480px) {
+
+// }

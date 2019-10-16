@@ -1,0 +1,317 @@
+﻿@model frontier.myAccount.web.Models.LoggedInUserViewModel
+
+<nav class="header-status-nav navbar navbar-expand-md py-0">
+    <div class="container container-relaxed">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link py-0" href="#">
+                    <small><span class="fa fa-rocket fa-rotate-45 fa-fw"></span> My Gexa</small>
+                </a>
+            </li>
+            <li class="col-xs-4 nav-item d-block d-sm-none float-right">
+                <a class="nav-link py-0" asp-controller="Account" asp-action="Logout">
+                    <small><span class="fa fa-sign-out fa-white"></span>Logout</small>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav navbar-right d-none d-md-flex">
+            <li class="nav-item">
+                <a class="nav-link py-0" href="">
+                    <small>
+                        <span class="fa fa-user-circle fa-white"></span>
+                        <span class="hidden-xs">Hi,  Johnny!</span>
+                    </small>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-0" asp-controller="Account" asp-action="Logout">
+                    <small>
+                        <span class="fa fa-sign-out fa-white"></span>
+                        <span class="hidden-xs">Logout</span>
+                    </small>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-0" href="https://www.gexaenergy.com/for-home/support/contact-us/">
+                    <small>
+                        <span class="fa fa-phone fa-white"></span>
+                        <span>866-961-9399</span>
+                    </small>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-md py-0 custom-nav" nav id="custom-nav">
+
+    <div class="container container-relaxed">
+
+        <!-- Navbar Logo -->
+        <button class="navbar-toggler collapsed no-hamburger" type="button" data-toggle="collapse" data-target="#main_menu"
+                aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
+            <small class="navbar-toggler-close">CLOSE</small>
+            <small class="navbar-toggler-open">MENU</small>
+        </button>
+        <a class="navbar-brand py-0" href="#">
+            <img class="py-0" src="~/images/global/gexa-lq.png" alt="Gexa Energy" />
+        </a>
+        <!-- Navbar Logo -->
+      
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="main_menu">
+
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item dropdown dropdown-full account-menu" id="account-menu">
+                    <a class="nav-link dropdown-toggle" id="account-DropDown"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        My Account
+                    </a>
+
+                    <div class="dropdown-menu px-0 py-0" aria-labelledby="account-DropDown">
+                        <div class="dropdown-item px-0 py-0">
+                            <div class="row" style="margin-left:-1px;margin-right:-1px">
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hero no-margin">
+                                    <div class="">
+                                        <h3>
+                                            <a>My Account</a>
+                                        </h3>
+                                        <p>Update your security or Go Paperless! Set your personal preferences with ease.</p>
+                                        <p>And don’t forget to earn rewards by referring your friends!</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 non-transparent no-margin-col2">
+                                    <ul class="list-unstyled list-center list-rule">
+                                        <li>
+                                            <a>Profile and Preferences</a>
+                                        </li>
+                                        <li>
+                                            <a>Message Center</a>
+                                        </li>
+                                        <li>
+                                            <a>Rewards and Referrals</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 non-transparent no-margin-col2">
+                                    <ul class="list-unstyled list-center">
+                                        <li>
+                                            <strong> Other My Account Favorites</strong>
+                                        </li>
+                                        <li>
+                                            <a>Reset Your Password</a>
+                                        </li>
+                                        <li>
+                                            <a>Change Your Security Questions</a>
+                                        </li>
+                                        <li>
+                                            <a>Sign up for Email Notifications</a>
+                                        </li>
+                                        <li>
+                                            <a>Go Paperless!</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li role="separator" class="divider"></li>
+
+                <li class="nav-item dropdown dropdown-full plans-menu" id="plans-menu">
+                    <a class="nav-link" dropdown-toggle" id="plans-services-DropDown"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plans &amp; Services
+                    </a>
+
+                    <div class="dropdown-menu px-0 py-0" aria-labelledby="plans-services-DropDown">
+                        <div class="dropdown-item px-0 py-0">
+
+                            <div class="row" style="margin-left:-1px;margin-right:-1px">
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hero no-margin">
+                                    <div class="">
+                                        <h3>
+                                            <a>Plans &amp; Services</a>
+                                        </h3>
+                                        <p>Manage all of your plans and services in one place! </p>
+                                        <p>Upgrade your plan, check your renewal offers, or use our moving tools if you’re moving to a new location. </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 non-transparent no-margin-col2">
+                                    <ul class="list-unstyled list-center list-rule">
+                                        <li>
+                                            <a>My Service Plans</a>
+                                        </li>
+                                        <li>
+                                            <a>Add Service Location</a>
+                                        </li>
+                                        <li>
+                                            <a>Moving Center</a>
+                                        </li>
+                                        <li>
+                                            <a>Order Status</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 no-margin-col2">
+                                    <ul class="list-unstyled list-center">
+                                        <li>
+                                            <strong>Other Plans and Services Options</strong>
+                                        </li>
+                                        <li>
+                                            <a>Upgrade Your Plan</a>
+                                        </li>
+                                        <li>
+                                            <a>Renew Your Plan</a>
+                                        </li>
+                                        <li>
+                                            <a>Manage Service Locations</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li role="separator" class="divider"></li>
+
+                <li class="nav-item dropdown dropdown-full payment-menu" id="payment-menu">
+                    <a class="nav-link" dropdown-toggle" id="payment-center-DropDown"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Payment Center
+                    </a>
+
+                    <div class="dropdown-menu px-0 py-0" aria-labelledby="payment-center-DropDown">
+                        <div class="dropdown-item px-0 py-0">
+                            <div class="row" style="margin-left:-1px;margin-right:-1px">
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hero no-margin">
+                                    <div class="">
+                                        <h3>
+                                            <a>Payment Center</a>
+                                        </h3>
+                                        <p>Make a one-time payment or enjoy peace of mind with auto-pay. </p>
+                                        <p>View more payment options with budget billing or payment extensions. </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 non-transparent no-margin-col2">
+                                    <ul class="list-unstyled list-center list-rule">
+                                        <li>
+                                            <a> View My Bill</a>
+                                        </li>
+                                        <li>
+                                            <a>Make a Payment</a>
+                                        </li>
+                                        <li>
+                                            <a>Payment Accounts</a>
+                                        </li>
+                                        <li>
+                                            <a>Payment Options</a>
+                                        </li>
+                                        <li>
+                                            <a>Payment History</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 non-transparent no-margin-col2">
+                                    <ul class="list-unstyled list-center">
+                                        <li>
+                                            <strong>Other Plans and Services Options</strong>
+                                        </li>
+                                        <li>
+                                            <a>Manage Auto Pay</a>
+                                        </li>
+                                        <li>
+                                            <a>Manage Payment Account</a>
+                                        </li>
+                                        <li>
+                                            <a>Need to Update Your Credit Card?</a>
+                                        </li>
+                                        <li>
+                                            <a>Apply for a Payment Extension</a>
+                                        </li>
+                                        <li>
+                                            <a>Set-Up Budget Billing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li role="separator" class="divider"></li>
+
+                <li class="nav-item dropdown dropdown-full control-menu" id="control-menu">
+                    <a class="nav-link" dropdown-toggle" id="energy-insights-DropDown"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Energy Insights
+                    </a>
+
+                    <div class="dropdown-menu px-0 py-0" aria-labelledby="energy-insights-DropDown">
+                        <div class="dropdown-item px-0 py-0">
+                            <div class="row" style="margin-left:-1px;margin-right:-1px">
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hero no-margin">
+                                    <div class="">
+                                        <h3>
+                                            <a>Energy Insights</a>
+                                        </h3>
+                                        <p>View your electricity usage, and compare your monthly consumption for each year you've been a customer.</p>
+                                        <p>See how you can manage your electricity usage by viewing our energy savings tips. </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 non-transparent no-margin-col2">
+                                    <ul class="list-unstyled list-center list-rule">
+                                        <li>
+                                            <a> Power Usage Tracker</a>
+                                        </li>
+                                        <li>
+                                            <a> Usage History</a>
+                                        </li>
+                                        <li>
+                                            <a>Savings</a>
+                                        </li>
+                                        <li>
+                                            <a>Energy Savings Tips</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 non-transparent no-margin-col2">
+                                    <img src="~/images/global/energy-insights_graph.png" alt="graphic" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+        <!-- Navbar Content -->
+
+    </div>
+
+</nav>
+
+<br class="visible-xs" />
+
+<!--Back up Backup LAST RESORT -->
+@*<nav class="navbar navbar-expand-md py-0 navbar-dark bg-dark">
+        <div class="container container-relaxed">
+            <ul class="navbar-nav navbar-left py-0">
+                <li class="col-8 col-sm-12"><a routerLink="/"><small><span class="fa fa-rocket fa-rotate-45 fa-fw"></span> My Gexa</small></a></li>
+                <li class="col-xs-4 d-block d-sm-none pull-right">
+                        <a href="#"><small><span class="fa fa-sign-out fa-white"></span>Logout</small></a>
+                    </li>
+            </ul>
+
+        </div>
+    </nav>*@
+

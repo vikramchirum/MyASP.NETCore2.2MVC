@@ -1,0 +1,165 @@
+﻿
+.myAccount {
+
+    .myAccount-side-panel {
+
+        h1 {
+            color: rgba(6,81,128,1.0);
+            font-size: 44px;
+            font-weight: 400;
+        }
+        /* Take out default blue color for anchor tags. */
+        a {
+            color: #000;
+        }
+
+        .active {
+            border-color: rgba(6,81,128,1.0);
+        }
+
+        li:hover {
+            background-color: lighten($account-base, 70%);
+
+            a, a:link, a:visited {
+                color: $account-base;
+            }
+        }
+
+        li.active a {
+            color: $account-base;
+        }
+
+        li.active:before {
+            color: $account-base;
+        }
+    }
+
+    .list-group-item {
+        border-width: 0px 0px 1px 0px;
+        font-size: 14px;
+        border-radius: 0;
+        margin-bottom: 1px;
+
+        &.active {
+            background: #ffffff;
+            border-color: #ddd;
+        }
+
+        &.active:before {
+            content: "\F054";
+            font-family: FontAwesome;
+            display: inline-block;
+            margin-left: -15px;
+            margin-right: 6px;
+        }
+    }
+
+    .message-center {
+
+        h1, h2 {
+            color: $account-base;
+        }
+
+        .account-info {
+            p {
+                background-color: #000;
+                color: #fff;
+                padding: 10px;
+                display: inline-block;
+            }
+        }
+
+        .profile-inline {
+            h4 {
+                display: inline;
+            }
+        }
+
+        .control-value {
+            border-color: transparent;
+            box-shadow: none;
+        }
+    }
+}
+
+
+.my-account-profile {
+    /* use these styles to set the pencil font icon next to update */
+    $btn-Primarybg: rgba(46,177,52,1.0) !default;
+    $btn-Primaryborder: darken($btn-Primarybg, 15%) !default;
+
+    .btn-primary.btnUpdate,
+    .btn-primary.btnUpdate:focus {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none !important;
+        outline: 0;
+    }
+
+    .btn-primary.btnUpdate:active:focus {
+        color: #fff;
+        background-color: $btn-Primaryborder;
+        border-color: $btn-Primaryborder;
+        border-style: outset;
+        box-shadow: none !important;
+        outline: 0;
+    }
+    /* use these styles to set the pencil font icon next to update */
+    .col-form-label {
+        font-weight: 500;
+        text-align: right;
+    }
+
+    .btn-link {
+        color: $payment-base;
+        position: absolute;
+        right: 10px;
+        top: 0;
+        text-indent: -300px;
+        overflow: hidden;
+
+        &:after {
+            font-family: "FontAwesome";
+            content: "\F040";
+            display: inline-block;
+            top: 5px;
+            text-indent: 0;
+            position: absolute;
+            right: 9px;
+            color: $payment-base;
+        }
+    }
+
+    .error {
+        color: red;
+    }
+
+    .update-panel {
+        background-color: #d9edf7
+    }
+
+    .emailPanel {
+        background-color: #eeeeee;
+        padding-bottom: 20px;
+        margin: 0 -4rem;
+    }
+}
+
+
+
+
+.disableLink {
+    pointer-events: none;
+    color: lightgrey;
+}
+
+@media (max-width: 768px) {
+    .my-account-profile {
+        border: none;
+        padding: 0;
+    }
+}
+
+.jumbotron {
+    background-color: transparent;
+}

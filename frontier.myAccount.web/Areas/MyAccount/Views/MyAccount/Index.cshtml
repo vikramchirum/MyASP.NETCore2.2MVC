@@ -1,0 +1,69 @@
+﻿
+<div class="my-account-profile">
+
+    <section class="account-profile-edit">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>
+                    Hello, Johnny Davalos
+                </h2>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-info pull-right">Account No: 145289</div>
+            </div>
+        </div>
+        <br />
+
+        <div class="row">
+            <div class="col-md-4">
+                <label class="col-form-label">Email Address</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-control">johnnydavalos@gexaenergy.com</div>
+                <a class="btn btn-primary btnUpdate btn-link" href="#" id="btnUpdateEmailAddress">
+                    <i class="fa fa-pencil"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <br />
+            <div class="row update-panel" style="display:none">
+                <div class="col-12">
+                    <hr />
+                </div>
+                <div class="col-md-4">
+                    <label class="col-form-label">Change Email Address</label>
+                </div>
+                <div class="col-md-6">
+                    <form name="changeEmailAddressForm"
+                          novalidate
+                          align="center">
+                        <div class="form-group">
+                            <input type="email"
+                                   name="email"
+                                   class="form-control"
+                                   placeholder="Enter new email Address" />
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email"
+                                   name="confirmEmail"
+                                   class="form-control"
+                                   validateEqual="email"
+                                   placeholder="Confirm email Address" />
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="text-right">
+                            <button class="btn btn-primary" type="submit" [disabled]="">Save</button>
+                            <button class="btn btn-default" type="button" (click)="emitCancel()">Cancel</button>
+                        </div>
+                    </form>
+                    <hr />
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>

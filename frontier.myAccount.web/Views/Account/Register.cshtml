@@ -1,0 +1,40 @@
+﻿<section class="login-register-modal">
+    <div [config]="{ backdrop: 'static', keyboard: false }"
+         bsModal #loginRegisterModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-md ">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-xs-10 col-md-8 col-md-offset-2">
+                            <h2 class="modal-title text-center"><b>Register <span class="hidden-xs">for MyGexa</span></b></h2>
+                        </div>
+                        <div class="col-xs-2 col-md-2">
+                            <button type="button" class="close btn btn-block btn-link" aria-label="Close" (click)="reset()"> <span class="close-btn" aria-hidden="true"><i class="fa fa-remove"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body container-fluid">
+                    <div class="row">
+
+                        <div class="ui-show-service-number" *ngIf="showServiceNumberHelp">
+                            <div class="col-xs-12">
+                                <h5>Locate <b>Service Number</b> on Page 1 of <button class="btn btn-xs btn-link" (click)="ServiceNumberEBillToggle(showServiceNumberEBill = false)">Your Bill</button> or <button class="btn btn-xs btn-link" (click)="ServiceNumberEBillToggle(showServiceNumberEBill = true)"> On Your E-Bill</button></h5>
+                                <img src="../../../../assets/home/gexa-service_numer.png" alt="Gexa Service Number" width="100%" *ngIf="!showServiceNumberEBill">
+                                <img src="../../../../assets/home/gexa-service_numer-ebill.png" alt="Gexa Service Number" width="100%" *ngIf="showServiceNumberEBill">
+                                <i class="fa fa-remove" (click)="ServiceNumberHelpToggle()"></i>
+                            </div>
+
+                        </div>
+                        <div class="col-xs-12 col-md-8 col-md-offset-2">
+                       
+                            Registration
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

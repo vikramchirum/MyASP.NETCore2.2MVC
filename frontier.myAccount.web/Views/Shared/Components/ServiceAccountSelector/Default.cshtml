@@ -1,0 +1,16 @@
+﻿@model IEnumerable<frontier.myAccount.web.Models.ServiceAccountViewModel>
+
+<div class="service-account-selector-container">
+    <div class="form-group has-success">
+        <label>Dabbas</label>
+            <select class="form-control">
+                @{
+
+                foreach(var item in Model) {
+                <option value="@item.Id">@item.DisplayValue</option>
+                }
+                }
+
+            </select>
+    </div>
+</div>
